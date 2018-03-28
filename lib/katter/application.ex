@@ -10,7 +10,7 @@ defmodule Katter.Application do
   def start(_type, _args) do
     children = [
       Katter.Endpoint.child_spec(),
-      #Katter.Store.child_spec()
+      Katter.Store.child_spec()
     ]
 
     Logger.info("Started application")

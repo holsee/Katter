@@ -23,7 +23,8 @@ defmodule Katter.MixProject do
   defp deps do
     [
       {:cowboy, "~> 2.2"},
-      {:plug, "~> 1.5"}
+      {:plug, "~> 1.5"},
+      {:jason, "~> 1.0"}
     ]
   end
 end
