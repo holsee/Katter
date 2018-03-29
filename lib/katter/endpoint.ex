@@ -21,7 +21,6 @@ defmodule Katter.Endpoint do
   end
 
   post "/katter/messages" do
-    IO.inspect(conn)
     body = read_body(conn) |> elem(1) |> Jason.decode!()
     Katter.Store.insert(body)
     send_resp(conn, 200, "ain't got time for it, crocodiles!")
